@@ -1,5 +1,5 @@
 import React from 'react';
-import { DoctorItem } from '../types';
+import { DoctorItem } from './types';
 import LucideIcon from './LucideIcon';
 
 interface DoctorsProps {

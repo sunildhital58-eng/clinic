@@ -1,8 +1,8 @@
 import React from 'react';
-import { ClinicSettings, ServiceItem, DoctorItem, GalleryItemType, DepartmentItem, FAQItem } from '../types';
+import { ClinicSettings, ServiceItem, DoctorItem, GalleryItemType, DepartmentItem, FAQItem } from './types';
 import LucideIcon from './LucideIcon';
 import { doc, setDoc, deleteDoc, collection, addDoc, getDocs } from 'firebase/firestore';
-import { db, handleFirestoreError, OperationType } from '../firebase';
+import { db, handleFirestoreError, OperationType } from './firebase';
 
 interface AdminPanelProps {
   onClose: () => void;

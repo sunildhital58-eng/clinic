@@ -1,5 +1,5 @@
 import React from 'react';
-import { FAQItem } from '../types';
+import { FAQItem } from './types';
 import LucideIcon from './LucideIcon';
 
 interface FAQSectionProps {

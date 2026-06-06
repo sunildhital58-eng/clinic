@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClinicSettings } from '../types';
+import { ClinicSettings } from './types';
 import LucideIcon from './LucideIcon';
 import ReadMoreText from './ReadMoreText';
 

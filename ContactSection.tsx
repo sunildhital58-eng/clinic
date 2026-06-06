@@ -1,8 +1,8 @@
 import React from 'react';
-import { ClinicSettings, DoctorItem } from '../types';
+import { ClinicSettings, DoctorItem } from './types';
 import LucideIcon from './LucideIcon';
 import { collection, addDoc } from 'firebase/firestore';
-import { db, handleFirestoreError, OperationType } from '../firebase';
+import { db, handleFirestoreError, OperationType } from './firebase';
 
 interface ContactSectionProps {
   settings: ClinicSettings;

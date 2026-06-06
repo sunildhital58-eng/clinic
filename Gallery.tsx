@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryItemType } from '../types';
+import { GalleryItemType } from './types';
 import LucideIcon from './LucideIcon';
 
 interface GalleryProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DepartmentItem, ClinicSettings } from '../types';
+import { DepartmentItem, ClinicSettings } from './types';
 import LucideIcon from './LucideIcon';
 import ReadMoreText from './ReadMoreText';
 

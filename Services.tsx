@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceItem } from '../types';
+import { ServiceItem } from './types';
 import LucideIcon from './LucideIcon';
 import ReadMoreText from './ReadMoreText';
 
