@@ -1,0 +1,134 @@
+{
+  "entities": {
+    "ClinicInfo": {
+      "title": "ClinicInfo",
+      "description": "General settings and contact info for the clinic",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The name of the clinic" },
+        "email": { "type": "string", "format": "email", "description": "Contact email" },
+        "phone": { "type": "string", "description": "Contact phone number" },
+        "address": { "type": "string", "description": "Contact address" },
+        "heroTitle": { "type": "string", "description": "Main title under Hero section" },
+        "heroDescription": { "type": "string", "description": "Description in Hero section" },
+        "aboutTitle": { "type": "string", "description": "Title in About section" },
+        "aboutLeadText": { "type": "string", "description": "Lead text in About section" },
+        "aboutText": { "type": "string", "description": "Detailed text in About section" },
+        "bannerImageUrl": { "type": "string", "description": "Dynamic top banner background image URL" },
+        "googleMapUrl": { "type": "string", "description": "Embed live locations Google Maps URL" },
+        "whatsappNumber": { "type": "string", "description": "WhatsApp contact for bookings" },
+        "facebookUrl": { "type": "string", "description": "Facebook page link" },
+        "instagramUrl": { "type": "string", "description": "Instagram profile link" },
+        "twitterUrl": { "type": "string", "description": "Twitter profile link" }
+      },
+      "required": ["name", "email", "phone"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Medical services offered by the clinic",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Service title" },
+        "description": { "type": "string", "description": "Short description of the service" },
+        "icon": { "type": "string", "description": "Lucide icon name" }
+      },
+      "required": ["title", "description", "icon"]
+    },
+    "Doctor": {
+      "title": "Doctor",
+      "description": "Medical experts and doctors at the clinic",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Full name of the doctor" },
+        "specialty": { "type": "string", "description": "Medical specialty" },
+        "experience": { "type": "string", "description": "Years of experience" },
+        "rating": { "type": "number", "description": "Average user rating out of 5" },
+        "reviews": { "type": "number", "description": "Total count of reviews" },
+        "status": { "type": "string", "enum": ["available", "busy", "offline"], "description": "Doctor's availability status" },
+        "image": { "type": "string", "description": "URL to doctor's portrait or stock image" }
+      },
+      "required": ["name", "specialty", "experience", "rating", "reviews", "status"]
+    },
+    "GalleryItem": {
+      "title": "GalleryItem",
+      "description": "Photos of facility, staff, vaccinations, or patient care",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Brief description of the image" },
+        "image": { "type": "string", "description": "URL or placeholder description for the image" }
+      },
+      "required": ["title", "image"]
+    },
+    "Department": {
+      "title": "Department",
+      "description": "Key departments within the clinic",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Department name" },
+        "description": { "type": "string", "description": "Department description" },
+        "label": { "type": "string", "description": "Tag or badge text" },
+        "features": { "type": "array", "description": "Key features of the department" },
+        "image": { "type": "string", "description": "Image representing department" },
+        "icon": { "type": "string", "description": "Icon suffix" }
+      },
+      "required": ["title", "description"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Guest and patient scheduled medical appointments",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Patient full name" },
+        "email": { "type": "string", "format": "email", "description": "Patient email" },
+        "phone": { "type": "string", "description": "Patient phone number" },
+        "doctorId": { "type": "string", "description": "Doctor requested ID" },
+        "doctorName": { "type": "string", "description": "Doctor's full name" },
+        "date": { "type": "string", "description": "Requested appointment date" },
+        "notes": { "type": "string", "description": "Patient symptoms or general notes" },
+        "createdAt": { "type": "string", "description": "Timestamp when requested" },
+        "status": { "type": "string", "description": "Appointment status" }
+      },
+      "required": ["name", "phone", "date"]
+    },
+    "FAQ": {
+      "title": "FAQ",
+      "description": "Clinic dynamic Frequently Asked Questions",
+      "type": "object",
+      "properties": {
+        "question": { "type": "string", "description": "Frequently asked question" },
+        "answer": { "type": "string", "description": "Clinic medical response" }
+      },
+      "required": ["question", "answer"]
+    }
+  },
+  "firestore": {
+    "/clinic_info/{infoId}": {
+      "schema": "ClinicInfo",
+      "description": "Single-document configuration for general clinic metadata"
+    },
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Collection of medical services"
+    },
+    "/doctors/{doctorId}": {
+      "schema": "Doctor",
+      "description": "Collection of medical experts"
+    },
+    "/gallery/{galleryId}": {
+      "schema": "GalleryItem",
+      "description": "Collection of gallery photography"
+    },
+    "/departments/{departmentId}": {
+      "schema": "Department",
+      "description": "Key clinical departments"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Scheduled appointments submitted via guest UI"
+    },
+    "/faqs/{faqId}": {
+      "schema": "FAQ",
+      "description": "Frequently asked questions"
+    }
+  }
+}

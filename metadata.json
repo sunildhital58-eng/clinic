@@ -1,0 +1,6 @@
+{
+  "name": "Nepal Clinic Pvt. Ltd.",
+  "description": "Real-time Medical Consultation and Healthcare Clinic Portal with custom Administrative Management Dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
