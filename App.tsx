@@ -12,17 +12,17 @@ import {
 } from './initialData';
 
 // Component Imports
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Departments from './components/Departments';
-import Services from './components/Services';
-import Doctors from './components/Doctors';
-import Gallery from './components/Gallery';
-import ContactSection from './components/ContactSection';
-import FAQSection from './components/FAQSection';
-import AdminPanel from './components/AdminPanel';
-import LucideIcon from './components/LucideIcon';
+import Header from './Header';
+import Hero from './Hero';
+import About from './About';
+import Departments from './Departments';
+import Services from './Services';
+import Doctors from './Doctors';
+import Gallery from './Gallery';
+import ContactSection from './ContactSection';
+import FAQSection from './FAQSection';
+import AdminPanel from './AdminPanel';
+import LucideIcon from './LucideIcon';
 
 export default function App() {
   const [settings, setSettings] = React.useState<ClinicSettings | null>(null);
